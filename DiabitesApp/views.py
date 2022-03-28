@@ -31,9 +31,10 @@ def predict(request):
             x = data.drop('Outcome' , axis=1)
             y = data['Outcome']
             x_train , x_test , y_train , y_test = train_test_split(x , y , test_size=0.30)
-            model = LogisticRegression()
-            model.fit(x_train , y_train)
-            val1 = form.cleaned_data.get("Pregnancies")
+            model = LogisticRegression( solver='lbfgs', max_iter=10000)
+            
+            model.fit(x_train.values , y_train.values)
+            val1 = form.cleaned_data.get("Pregnancies") 
             val2 = form.cleaned_data.get("Glucose")  
             val3 = form.cleaned_data.get("BloodPressure")
             val4 = form.cleaned_data.get("SkinThickness")
