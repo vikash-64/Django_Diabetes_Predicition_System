@@ -4,6 +4,7 @@ import django_heroku
 import dj_database_url
 from decouple import config 
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -17,7 +18,7 @@ SECRET_KEY = 'django-insecure-zbzvfr$f+58iq8-5*=7xk9p^^!k_24sa21r8e-^at#7b55^(47
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -29,7 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'DiabitesApp'
+    'DiabitesApp',
+
 ]
 
 MIDDLEWARE = [

@@ -1,6 +1,9 @@
 from django.contrib import admin
 from django.urls import path 
-from DiabitesApp import views
+from  .import views
+
+
+
 
 urlpatterns = [
     
