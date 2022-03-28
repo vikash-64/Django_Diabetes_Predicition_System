@@ -1,1 +1,1 @@
-web: gunicorn DiabitesApp.wsgi
+web: gunicorn diabites.wsgi
